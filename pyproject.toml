@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "churn-compass"
+version = "1.0.0"
+description = "Customer churn classification and CRM prioritization under limited contact capacity"
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+dependencies = [
+  "numpy>=1.26,<3.0",
+  "pandas>=2.2,<3.0",
+  "scikit-learn>=1.5,<2.0",
+  "lightgbm>=4.3,<5.0",
+  "tabulate>=0.9,<1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0,<10.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
