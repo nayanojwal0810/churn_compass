@@ -1,0 +1,34 @@
+# Python environments and build artefacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+build/
+dist/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Local raw data (downloaded and checksum-verified by the pipeline)
+data/raw/*.csv
+
+# Generated analysis outputs; reproducible from the pipeline
+outputs/*
+!outputs/.gitkeep
+
+# Local editor / operating-system files
+.DS_Store
+.vscode/
+.idea/
+
+# Logs and transient files
+*.log
+*.tmp
+
+# Reproducible models are not versioned
+*.joblib
+*.pkl
